@@ -1,0 +1,129 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--pale-blue);
+}
+
+.card {
+  margin: 50px auto;
+  width: 450px;
+  background-color: white;
+  color: var(--desaturated-blue);
+  border-radius: 25px;
+  overflow: hidden; /* To hide the corners top right and left */
+}
+
+.child {
+  color: red;
+}
+
+/* 
+All of the children inside this container
+they will all get this margin with this value
+*/
+.container > * {
+  margin: 24px 0; /* Top/ bottom  left/right*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.title {
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+.container {
+  padding: 30px;
+}
+
+.order-description {
+  line-height: 25px;
+}
+
+.plan-container {
+  font-size: 16px;
+  background-color: var(--very-pale-blue);
+
+  padding: 25px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-container a {
+  color: var(--bright-blue);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.plan-container a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.plan-container strong {
+  color: var(--dark-blue);
+}
+
+.plan-description {
+  line-height: 20px;
+  margin-right: 7.5rem;
+}
+
+.btn {
+  border: none;
+  width: 100%;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.proceed-button {
+  background-color: var(--bright-blue);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 10px 20px -8px rgb(179 189 245);
+}
+
+.proceed-button:hover {
+  opacity: 0.8;
+}
+
+.cancel-button {
+  background-color: white;
+  color: var(--desaturated-blue);
+  margin-top: 22px;
+}
+
+.cancel-button:hover {
+  color: #000;
+}
